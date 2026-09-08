@@ -12,9 +12,10 @@ The project extracts data from the web using automated browser tooling, cleans a
 ## Project Structure
 - `scraping_weather.py` — Scrapes monthly historical weather summaries (High, Low, Average) for both cities via Selenium and saves raw output to `capstone_weather_rawdata.csv`.
 - `cleaning_weather.py` — Cleans raw text fields, extracts numeric values (temperatures, humidity, barometric pressure), adds standardized metadata (calendar month names, year), and saves cleaned output to `capstone_weather_cleaned.csv`.
+- `save_df_to_db.py` — Reads the cleaned weather dataset via Pandas and writes records into a local SQLite database `capstone_weather.db`
 - `capstone_weather_rawdata.csv` — Raw scraped data file.
 - `capstone_weather_cleaned.csv` — Cleaned and transformed dataset ready for analysis.
-
+- `capstone_weather.db` — SQLite relational database storing structured weather tables.
 ---
 
 ## Setup & Installation
@@ -45,3 +46,7 @@ The project extracts data from the web using automated browser tooling, cleans a
 2. **Clean and transform data**
     ```bash
     python cleaning_weather.py
+
+3. **Save to Data Base**
+    ```bash
+    python save_to_db.py
