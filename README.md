@@ -7,6 +7,8 @@ This project compares historical weather data for the year 2025 between two geog
 
 The project extracts data from the web using automated browser tooling, cleans and standardizes the dataset, and prepares it for analysis and visualization.
 
+URL to Streamlit interactive app with the capstone results contains in `service_urls.txt`.
+
 ---
 
 ## Project Structure
@@ -16,6 +18,7 @@ The project extracts data from the web using automated browser tooling, cleans a
 - `capstone_weather_rawdata.csv` — Raw scraped data file.
 - `capstone_weather_cleaned.csv` — Cleaned and transformed dataset ready for analysis.
 - `capstone_weather.db` — SQLite relational database storing structured weather tables.
+- `dashboard_capstone.py` — Streamlit app code for creating a dashboard.  
 ---
 
 ## Setup & Installation
@@ -33,7 +36,7 @@ The project extracts data from the web using automated browser tooling, cleans a
    source .venv/bin/activate
 3. **Install dependencies:**
     ```bash 
-    pip install selenium webdriver-manager pandas
+    pip install selenium webdriver-manager pandas plotly
 
 ---
 
@@ -50,3 +53,4 @@ The project extracts data from the web using automated browser tooling, cleans a
 3. **Save to Data Base**
     ```bash
     python save_to_db.py
+   
